@@ -7,7 +7,5 @@
 
 ## 사용 스택#
 
-git add .
-git status
-git commit -m "dd"
-git push -u origin main
+## 라이브러리 설치
+sasss를 설치 : `npm install sass`
