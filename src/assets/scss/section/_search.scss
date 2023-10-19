@@ -1,0 +1,22 @@
+.search__inner {
+    width: 100%;
+    padding: 17px 40px;
+    border-bottom: 1px solid #bed1ee;
+
+    label {
+        display: none;
+        color: #dddada;
+    }
+    .search__input {
+        width: 100%;
+        background-color: #f4f8fd;
+        border: 1px solid #bed1ee;
+        padding: 15px 30px;
+        border-radius: 10px;
+        color: #bed1ee;
+        
+        .placeholder {
+            color: #ccc;
+        }
+    }
+}

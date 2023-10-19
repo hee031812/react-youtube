@@ -1,0 +1,36 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    z-index: 1000;
+    background-color: var(--white);
+    border-right: solid 1px #bed1ee;
+}
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+    background-color: #fff;
+    color: #000;
+}
+#footer {
+    text-align: center;
+    border-top: 1px solid #bed1ee;
+    padding: 10px 10px 10px 250px;
+    background-color: #fff;
+    color: #000;
+
+    a {
+        color: #000000;
+        padding: 10px;
+        display: inline-block;
+
+        &:hover {
+            @include underline;
+            text-decoration-color: var(--black300);
+        }
+    }
+}

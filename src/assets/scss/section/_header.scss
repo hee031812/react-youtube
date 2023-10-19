@@ -1,0 +1,145 @@
+.header__logo {
+    a {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+        border-bottom: 1px solid #bed1ee ;
+
+        em {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+            position: relative;
+            background-color: #5f91dd;
+            animation: logo 3s 3s ease-in-out infinite;
+
+            @keyframes logo {
+                0% {transform: translateX(0);}
+                50% {transform: translateX(100%); transform: translateY(-20%);}
+                // 0% {
+                //     transform: rotate(0deg);
+                // }
+                // 50% {
+                //     transform: rotate(600deg);
+                //     border-radius: 50px;
+                //     background-color: #fff;
+                // }
+                // 100% {
+                //     transform: rotate(0deg)
+                // }
+            }
+        }
+        svg {
+            position: absolute;
+            left: 7px;
+            top: 7px;
+            border: 1px solid #5f91dd;
+
+        }
+        span {
+            margin-top: 8px;
+            font-size: 20px;
+            line-height: 1;
+            font-family: var(--mainfont-nanum);
+            font-weight: 900;
+            color: #5f91dd;
+        }
+    }
+}
+
+.header__menu {
+    padding: 10px;
+
+    .menu {
+        
+        li {
+            margin-bottom: 5px;
+            a {
+                font-size: 1rem; //모바일로 보면 14px
+                display: block;
+                line-height: 1;
+                color: #fff;
+                padding: 1.4rem 2rem 1rem 2.9rem;
+                border-radius: 10px;
+                position: relative;
+                background-color: #b3ccf7;
+                transition: all 0.2s;
+                border: 1px solid ;
+
+                &:hover {
+                    background-color: #5f91dd;
+                    border: 1px solid #5f91dd;
+                }
+
+                svg {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    position: absolute;
+                    left: 1.25rem;
+                    top: 1rem;
+                }
+            }
+            &.active {
+                a {
+                    background-color: #5f91dd;
+                }
+            }
+        }
+    }
+}
+.keyword {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px dashed #5f91dd;
+    border-bottom: 1px dashed #5f91dd;
+
+    ul {
+
+    }
+    li {
+        
+        color: #000;
+        padding: 1px;
+        margin: 25px;
+
+        &:hover {
+            border-radius: 5px;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #d3e0f5;
+            border: 1px solid #5f91dd;
+        }
+    }
+
+    
+}
+.header__sns {
+    border-top: 1px solid #d3e0f5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    padding: 18px 0 10px;
+    background-color: #d3e0f5;
+
+
+    ul {
+        display: inline-block;
+
+        li {
+            display: inline-block;
+            padding: 5px 7px;
+
+            }
+            
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}
+
