@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import { fetchFromAPI } from '../utils/api';
 import ReactPlayer from 'react-player';
+import { BiSolidLike } from "react-icons/bi";
+import { CiChat1 } from "react-icons/ci";
+import { CiRead } from "react-icons/ci";
+import { VscThumbsup } from "react-icons/vsc";
+
+
+
 
 const Video = () => {
     const { videoId } = useParams();
@@ -34,11 +41,14 @@ const Video = () => {
                         <h2 className='video__title'>
                             {videoDetail.snippet.title}
                         </h2>
-                        <div className='video__chnnel'>
-                            <div className='id'>{videoDetail.id}</div>
-                            <div className='count'>조회수: {videoDetail.statistics.viewCount}
-                                <span className='like'>글씨 좋아요: {videoDetail.statistics.viewCount}</span>
-                                <span className='commet'>댓글: {videoDetail.statistics.commentCount}</span>
+                        <div className='video__channel'>
+                            <div className='id'>
+                                <Link to ={`/channel/${videoDetail.snippet.channelId}`}>{videoDetail.snippet.channelTitle}</Link>
+                            </div>
+                            <div className='count'>
+                                <span className='View'><CiRead />조회수: {videoDetail.statistics.viewCount}</span>
+                                <span className='like'><VscThumbsup />좋아요: {videoDetail.statistics.likeCount}</span>
+                                <span className='commet'><CiChat1 />댓글: {videoDetail.statistics.commentCount}</span>
                             </div>
                         </div>
                     </div>
