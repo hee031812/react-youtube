@@ -36,9 +36,9 @@ const Video = () => {
                         </h2>
                         <div className='video__chnnel'>
                             <div className='id'>{videoDetail.id}</div>
-                            <div className='count'>{videoDetail.statistics.viewCount}
-                                <span className='like'>{videoDetail.statistics.viewCount}</span>
-                                <span className='commet'>{videoDetail.statistics.commentCount}</span>
+                            <div className='count'>조회수: {videoDetail.statistics.viewCount}
+                                <span className='like'>글씨 좋아요: {videoDetail.statistics.viewCount}</span>
+                                <span className='commet'>댓글: {videoDetail.statistics.commentCount}</span>
                             </div>
                         </div>
                     </div>
