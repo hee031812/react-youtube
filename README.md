@@ -14,10 +14,10 @@ react-icons 설치 : `npm install react-icons`
 axios 설치 : `npm i axios`
 react-player 설치 : `npm i react-player`
 
-## 터미널 깃 업로드 커밋
+## 터미널 깃 업로드 커밋하기
 git add.
 git status
 git commit -m "커밋할이름"
-git push -u origin main
+git push -u origin main 
 
-https://velog.io/@simchodi/Git-%EC%B4%88%EA%B8%B0%EC%84%B8%ED%8C%85-%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%81%EC%96%B4
+https://velog.io/@simchodi/Git-%EC%B4%88%EA%B8%B0%EC%84%B8%ED%8C%85-%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%81%EC%96%B4d

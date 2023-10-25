@@ -1,24 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchFromAPI } from '../utils/api';
-import { BiSolidLike } from "react-icons/bi";
-import { CiChat1 } from "react-icons/ci";
 import { CiRead } from "react-icons/ci";
 import { VscThumbsup } from "react-icons/vsc";
 import { CiViewList } from "react-icons/ci";
-
-
+import VideoSearch from '../components/video/VideoSearch';
 
 
 const Channel = () => {
     const { channelId } = useParams();
     const [channelDetail, setChannelDetail] = useState();
+    const [ channelVideo, setChannelVideo ] = useState([]);
 
     useEffect(() => {
         const fetchResults = async () => {
             try {
                 const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
                 setChannelDetail(data.items[0]);
+
+                const videoData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet&order=date`)
+                console.log(videoData);
+                setChannelVideo(videoData.items);
+
+
             } catch (error) {
                 console.log("Error fetching data", error);
             }
@@ -46,7 +50,9 @@ const Channel = () => {
                             <span className='viewCount'><CiRead />{channelDetail.statistics.viewCount}</span>
                         </div>
                     </div>
-                    <div className='channel__video video__inner'></div>
+                    <div className='channel__video video__inner'>
+                        <VideoSearch Videos={channelVideo}/>
+                    </div>
                     <div className='channel__more'></div>
                 </div>
             )}

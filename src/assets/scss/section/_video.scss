@@ -126,6 +126,7 @@
                 margin-right: 10px;
                 flex-wrap: nowrap;
                 align-items: center;
+                margin-bottom: 10px;
 
             }
             .View {
@@ -137,6 +138,38 @@
             .commet {
                 margin-right: 10px;
             }
+        }
+    }
+}
+
+.comments {
+    width: 100%;
+    border: 1px solid #bed1ee;
+    padding: 15px;
+    border-radius: 10px;
+
+    h3 {
+      width: 60px;
+      height: 30px;
+      margin-bottom: 10px;
+      background-color: #bed1ee; 
+      text-align: center;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5px;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    ul {
+        li {
+            line-height: 2.5;
+            border: 1px solid #bed1ee;
+            margin-top: 5px;
+            padding-left: 5px;
+            border-radius: 5px;
         }
     }
 }
